@@ -4,11 +4,13 @@ import os
 
 print("==== Registro ====")
 temarroba = False
-email_registro = input("digite seu email: ")
+email_registro = [grhijg gfdgfeg]
+email_registro.append(input("digite seu email: "))
 
 for a in email_registro:
-    if a == "@":
-        temarroba=True
+    for l in a:
+        if l == "@":
+            temarroba=True
 
 if temarroba == False:
     print("email invalido")
@@ -24,9 +26,9 @@ email_certo = False
 senha_certa = False
 
 email_login = input("digite seu email: ")
-for e in email_login:
-    if email_login == email_registro:
-        email_certo = True
+    for e in email_login:
+        if email_login == email_registro:
+            email_certo = True
 if email_certo == False:
     print("email incorreto")
 
