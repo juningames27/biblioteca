@@ -1,23 +1,29 @@
-import time
-import os
-#registro
 
-print("==== Registro ====")
-temarroba = False
-email_registro = [grhijg gfdgfeg]
-email_registro.append(input("digite seu email: "))
+email_registro = []
+senha_registro = []
 
-for a in email_registro:
-    for l in a:
-        if l == "@":
-            temarroba=True
+def verifica_arrroba(email_registro):
+    tem_arroba = False
+    for a in email_registro:
+        for i in a:
+            if i == "@":
+                tem_arroba = True
 
-if temarroba == False:
-    print("email invalido")
+    return tem_arroba
 
-senha_registro = input("digite sua senha: ")
-print("aguarde... ")
-time.sleep(1)
+def registro(email_registro, senha_registro):
+    newemail = input("digite seu email: ")
+
+    while verifica_arrroba(newemail) == False:
+        newemail = input("digite um email valido: ")
+
+    email_registro.append(newemail)
+    senha_registro.append(input("digite a senha: "))
+registro(email_registro, senha_registro)
+
+
+
+
 
 #login
 
